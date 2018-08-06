@@ -9,7 +9,7 @@
     $id = $_SESSION['id'];
     $query = $_POST['query'];
 
-    $sql = "select first_name,last_name,phone from client_info WHERE phone like '%$query%' AND user_id ='$id'";
+    $sql = "select id,first_name,last_name,phone from client_info WHERE phone like '%$query%' AND user_id ='$id'";
 
     $output = '';
 
@@ -25,6 +25,7 @@
                 <tr>
                  <th>Name</th>
                  <th>Phone</th>
+                 <th>Link</th>
           
                 </tr>';
 
@@ -35,6 +36,8 @@
                            <tr>
                             <td>'.$row["first_name"].'</td>
                             <td>'.$row["phone"].'</td>
+                            <td><a href="search_result.php?client='.$row["id"].'">'.'change</a></td>
+                            
                            
                            </tr>
                           ';

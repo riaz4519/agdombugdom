@@ -185,7 +185,7 @@ if (isset($_POST['answer'])){
          <div class="form-group">
              <div class="input-group">
 
-                 <input type="text" name="search_text" id="search_text" placeholder="Search by Customer Details" class="form-control" />
+                 <input type="text" name="search_text" id="search_text" placeholder="Search client with number" class="form-control border-success" />
              </div>
          </div>
          <div id="result"></div>

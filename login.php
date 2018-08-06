@@ -19,7 +19,9 @@ if (isset($_POST['submit'])){
     $pass = $_POST['password'];
 
     $sql = "select * from user WHERE  email = '$email'AND password='$pass'";
-    if ($data = $connect->query($sql)->fetch_assoc()){
+    if ($data = $connect->query($sql)->num_rows > 0){
+
+        $data =$connect->query($sql)->fetch_assoc();
 
         $_SESSION['id'] = $data['id'];
        $_SESSION['name'] = $data['name'];
