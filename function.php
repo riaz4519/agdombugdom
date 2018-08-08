@@ -22,6 +22,18 @@
 
  }
 
+function format_month_year($month){
+
+    $date = new DateTime($month);
+    return $date->format('M Y');
+
+}
+
+ function format_month($month){
+     $date = new DateTime($month);
+     return $date->format('Y-m');
+ }
+
  function sendMessage($phone,$date,$sendType,$name,$counselor_name,$counselor_phone,$time){
 
 
