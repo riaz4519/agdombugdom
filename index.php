@@ -165,7 +165,7 @@ if (isset($_POST['answer'])){
 
         $number_of_appointment  = $connect->query($fullfiled_sql)->num_rows;
 
-        $sql_today = "select * from client_info where appointed_date like '%$today%' AND appointed = TRUE";
+        $sql_today = "select * from client_info where appointed_date like '%$today%' AND user_id = '$user_id'";
 
         $number_of_appointment_today = $connect->query($sql_today)->num_rows;
         $number_of_appointment_today;

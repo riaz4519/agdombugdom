@@ -44,51 +44,42 @@ if (isset($_POST['login'])){
 
 <?php include "middle_header.php"; ?>
 
-<form class="form-horizontal" role="form" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-    <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6 text-center">
-            <h2>Please Login</h2>
-            <hr>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-            <div class="form-group has-danger">
-                <label class="sr-only" for="email">E-Mail Address</label>
-                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                    <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
-                    <input type="email" name="email" class="form-control" id="email"
-                           placeholder="you@example.com" required autofocus>
+<div class="container">
+    <form class="row d-flex justify-content-center" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+
+        <div class="card border-info text-danger  col-6 mt-5 ">
+            <div class=" card-body " >
+
+                <div class="card-header text-center">
+                    <h4>SIP CALLER GIC CTG(ADMIN)</h4>
                 </div>
-            </div>
-        </div>
+                <div class="form-group">
 
-    </div>
-    <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <label class="sr-only" for="password">Password</label>
-                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                    <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-key"></i></div>
-                    <input type="password" name="password" class="form-control" id="password"
-                           placeholder="Password" required>
+                    <label for="email">Email:</label>
+
+                    <input id="email"  name="email" type="email" placeholder="Insert your email" class="form-control p-3"  type="text"  required>
+
                 </div>
+                <div class="form-group">
+
+                    <label for="password">Password:</label>
+                    <input  id="password" name="password" type="password" placeholder="insert Your Pasword" class="form-control p-3"  type="text"  required>
+
+
+                </div>
+
+
             </div>
-        </div>
 
-    </div>
+            <div class="card-footer">
+                <input type="submit" class="btn btn-info  float-right"  name="login" value="Login">
 
-    <div class="row" style="padding-top: 1rem">
-        <div class="col-md-4"></div>
-        <div class="col-md-4 ml-3">
-            <input type="submit" class="btn btn-success btn-block" name="login" value="login">
+            </div>
 
         </div>
-    </div>
-</form>
+    </form>
+
+</div>
 
 
 <?php include "middle_footer.php"; ?>

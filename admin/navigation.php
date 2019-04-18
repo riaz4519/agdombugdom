@@ -15,6 +15,10 @@
                 <a class="nav-link" href="target.php">Target</a>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link" href="user_register.php">Register Counselor</a>
+            </li>
+
 
         </ul>
         <ul class="navbar-nav ml-auto">
@@ -33,7 +37,7 @@
 
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                    <a class="dropdown-item" href="../logout.php">Logout</a>
+                    <a class="dropdown-item" href="logout.php">Logout</a>
                 </div>
 
             </li>

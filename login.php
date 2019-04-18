@@ -42,40 +42,42 @@ if (isset($_POST['submit'])){
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <title>Document</title>
+
     </head>
-<body>
+<body style="background-color: #ced1d1">
 <div class="container">
-<form class="form-horizontal row d-flex justify-content-center" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+<form class="row d-flex justify-content-center" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 
+    <div class="card border-info text-danger  col-6 mt-5 ">
+        <div class=" card-body " >
 
-
-
-        <div class="col-md-5 mt-5 col-11 card card-body border-dark" >
-
+            <div class="card-header text-center">
+                <h4>SIP CALLER GIC CTG</h4>
+            </div>
             <div class="form-group">
 
+                    <label for="email">Email:</label>
 
-                    <div class="input-group">
-
-                        <input  name="email" type="email" placeholder="Insert your email" class="form-control"  type="text"  required>
-                    </div>
+                    <input id="email"  name="email" type="email" placeholder="Insert your email" class="form-control p-3"  type="text"  required>
 
             </div>
             <div class="form-group">
 
-                    <div class="input-group">
+                <label for="password">Password:</label>
+                <input  id="password" name="password" type="password" placeholder="insert Your Pasword" class="form-control p-3"  type="text"  required>
 
-                        <input  name="password" type="password" placeholder="insert Your Pasword" class="form-control"  type="text"  required>
-                    </div>
 
             </div>
-            <input type="submit" class="form-control btn btn-success"  name="submit" value="Login">
-
-
-
 
 
         </div>
+
+        <div class="card-footer">
+            <input type="submit" class="btn btn-info  float-right"  name="submit" value="Login">
+
+        </div>
+
+    </div>
 </form>
 
     </div>
